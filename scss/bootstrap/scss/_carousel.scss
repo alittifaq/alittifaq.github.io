@@ -55,7 +55,10 @@
 
 /* rtl:end:ignore */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> codet
 //
 // Alternate transitions
 //
@@ -82,7 +85,10 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> codet
 //
 // Left/right controls for nav
 //
@@ -117,11 +123,27 @@
 }
 .carousel-control-prev {
   left: 0;
+<<<<<<< HEAD
   background-image: if($enable-gradients, linear-gradient(90deg, rgba($black, .25), rgba($black, .001)), null);
 }
 .carousel-control-next {
   right: 0;
   background-image: if($enable-gradients, linear-gradient(270deg, rgba($black, .25), rgba($black, .001)), null);
+=======
+  background-image: if(
+    $enable-gradients,
+    linear-gradient(90deg, rgba($black, 0.25), rgba($black, 0.001)),
+    null
+  );
+}
+.carousel-control-next {
+  right: 0;
+  background-image: if(
+    $enable-gradients,
+    linear-gradient(270deg, rgba($black, 0.25), rgba($black, 0.001)),
+    null
+  );
+>>>>>>> codet
 }
 
 // Icons for within
@@ -195,7 +217,10 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> codet
 // Optional captions
 //
 //
