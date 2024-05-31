@@ -9,6 +9,10 @@
   @include img-fluid();
 }
 
+.img-carousel {
+  @include img-carousel();
+}
+
 
 // Image thumbnails
 .img-thumbnail {

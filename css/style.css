@@ -204,6 +204,12 @@
     background-size: cover;
 }
 
+.page-header-store {
+    background: linear-gradient(rgba(78, 80, 60, 0.5), rgb(122, 192, 93, 0.5)), url(../img/store1.jpeg) center center no-repeat;
+    background-size: cover;
+}
+
+
 .page-header .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -406,6 +412,10 @@
 .store-item:hover .store-overlay {
     opacity: 1;
 }
+
+.custom-color {
+    color: #C9B561;
+  }
 
 
 /*** Contact ***/
