@@ -442,6 +442,11 @@
 .gallery-item:hover figcaption {
   opacity: 1;
 }
+
+.hidden {
+  display: none;
+}
+
 /* Gallery */
 .modal-video .modal-dialog {
   position: relative;

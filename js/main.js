@@ -39,6 +39,15 @@
         return false;
     });
 
+    // Gallery Hidden
+    document.getElementById('loadMoreBtn').addEventListener('click', function() {
+        var hiddenItems = document.querySelectorAll('.gallery-item.hidden');
+        hiddenItems.forEach(function(item) {
+          item.classList.remove('hidden');
+        });
+        this.style.display = 'none';
+    });
+
 
     // Modal Video
     var $videoSrc;
