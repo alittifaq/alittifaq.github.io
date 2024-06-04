@@ -1,0 +1,54 @@
+{
+    "produk": [
+      {
+        "foto": "url_foto",
+        "nama": "nama_produk"
+      },
+      {
+        "foto": "url_foto",
+        "nama": "nama_produk"
+      },
+      {
+        "foto": "url_foto",
+        "nama": "nama_produk"
+      },
+      {
+        "foto": "url_foto",
+        "nama": "nama_produk"
+      }
+    ],
+    "galeri": [
+      {
+        "foto": "url_foto",
+        "judul_kegiatan": "judul_kegiatan",
+        "tahun": "tahun_kegiatan"
+      },
+      {
+        "foto": "url_foto",
+        "judul_kegiatan": "judul_kegiatan",
+        "tahun": "tahun_kegiatan"
+      },
+      {
+        "foto": "url_foto",
+        "judul_kegiatan": "judul_kegiatan",
+        "tahun": "tahun_kegiatan"
+      }
+    ],
+    "tips": [
+      {
+        "judul": "judul_tips",
+        "foto": "url_foto",
+        "deskripsi": "deskripsi_tips"
+      },
+      {
+        "judul": "judul_tips",
+        "foto": "url_foto",
+        "deskripsi": "deskripsi_tips"
+      },
+      {
+        "judul": "judul_tips",
+        "foto": "url_foto",
+        "deskripsi": "deskripsi_tips"
+      }
+    ]
+  }
