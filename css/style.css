@@ -395,23 +395,23 @@
 
 @media (max-width: 768px) {
   .gallery-item {
-    width: 30%;  /* Empat kolom per baris untuk layar kecil */
-    margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
+    width: 30% !important;  /* tiga kolom per baris untuk layar kecil */
+    margin: 1.66% !important;  /* Sesuaikan margin agar sesuai dengan layout */
   }
   
   .gallery-item figcaption {
-    font-size: 0.6em;  /* Ukuran teks yang lebih kecil untuk layar kecil */
+    font-size: 0.6em !important;  /* Ukuran teks yang lebih kecil untuk layar kecil */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item {
-    width: 30%;  /* Empat kolom per baris untuk layar sangat kecil */
-    margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
+    width: 30% !important;  /* tiga kolom per baris untuk layar sangat kecil */
+    margin: 1.66% !important;  /* Sesuaikan margin agar sesuai dengan layout */
   }
   
   .gallery-item figcaption {
-    font-size: 0.5em;  /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
+    font-size: 0.5em !important;  /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
   }
 }
 
