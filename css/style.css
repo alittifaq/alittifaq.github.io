@@ -386,19 +386,40 @@
   transition: transform 0.3s ease; /* Efek zoom in */
 }
 
+@media (max-width: 991.98px) {
+  .gallery-item {
+    width: 30%;  /* Tiga kolom per baris untuk layar medium */
+    margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
+  }
+}
+
 @media (max-width: 768px) {
   .gallery-item {
-    width: 45%;  /* Dua kolom per baris untuk layar kecil */
-    margin: 2.5%;  /* Sesuaikan margin agar sesuai dengan layout */
+    width: 23%;  /* Empat kolom per baris untuk layar kecil */
+    margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
+  }
+  
+  .gallery-item figcaption {
+    font-size: 0.6em;  /* Ukuran teks yang lebih kecil untuk layar kecil */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item {
-    width: 100%;  /* Satu kolom per baris untuk layar sangat kecil */
-    margin: 0 0 2em 0;  /* Sesuaikan margin agar sesuai dengan layout */
+    width: 23%;  /* Empat kolom per baris untuk layar sangat kecil */
+    margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
+  }
+  
+  .gallery-item figcaption {
+    font-size: 0.5em;  /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
   }
 }
+
+
+
+
+
+
 
 
 .gallery-item img {
