@@ -395,7 +395,7 @@
 
 @media (max-width: 768px) {
   .gallery-item {
-    width: 23%;  /* Empat kolom per baris untuk layar kecil */
+    width: 30%;  /* Empat kolom per baris untuk layar kecil */
     margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
   }
   
@@ -406,7 +406,7 @@
 
 @media (max-width: 480px) {
   .gallery-item {
-    width: 23%;  /* Empat kolom per baris untuk layar sangat kecil */
+    width: 30%;  /* Empat kolom per baris untuk layar sangat kecil */
     margin: 1%;  /* Sesuaikan margin agar sesuai dengan layout */
   }
   
@@ -414,13 +414,6 @@
     font-size: 0.5em;  /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
   }
 }
-
-
-
-
-
-
-
 
 .gallery-item img {
   display: block;
