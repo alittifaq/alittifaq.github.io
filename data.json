@@ -15,36 +15,19 @@
     ],
     "galeri": [
       {
-        "foto": "url_foto",
-        "judul_kegiatan": "judul_kegiatan",
-        "tahun": "tahun_kegiatan"
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0015.jpg",
+        "judul_kegiatan": "Kegiatan 1",
+        "tahun": "2020"
       },
       {
-        "foto": "url_foto",
-        "judul_kegiatan": "judul_kegiatan",
-        "tahun": "tahun_kegiatan"
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0020.jpg",
+        "judul_kegiatan": "Kegiatan 2",
+        "tahun": "2021"
       },
       {
-        "foto": "url_foto",
-        "judul_kegiatan": "judul_kegiatan",
-        "tahun": "tahun_kegiatan"
-      }
-    ],
-    "tips": [
-      {
-        "judul": "judul_tips",
-        "foto": "url_foto",
-        "deskripsi": "deskripsi_tips"
-      },
-      {
-        "judul": "judul_tips",
-        "foto": "url_foto",
-        "deskripsi": "deskripsi_tips"
-      },
-      {
-        "judul": "judul_tips",
-        "foto": "url_foto",
-        "deskripsi": "deskripsi_tips"
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0027.jpg",
+        "judul_kegiatan": "Kegiatan 3",
+        "tahun": "2022"
       }
     ]
   }
