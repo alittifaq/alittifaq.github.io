@@ -14,9 +14,15 @@ teks editor ringan dan handal yang dibuat
 oleh Microsoft untuk sistem operasi
 multiplatform, artinya tersedia juga untuk
 versi Linux, Mac, dan Windows. 
-Untuk menginstal kunjungi situs resmi Visual Stusio Code. Anda bisa menikuti tautan ini https://code.visualstudio.com/
+langkah-langkah untuk menginstalnya:
+
+1. Kunjungi situs resmi Visual Stusio Code. Anda bisa menikuti tautan ini https://code.visualstudio.com/
+2. Pilih versi yang sesuai dengan sistem operasi Anda (Windows, macOS, atau Linux).
 ### 2.2 INSTALASI GOLANG
+Golang adalah bahasa pemrograman yang akan digunakan untuk mengembangkan backend website. 	
+Cara instalasinya berbeda-beda	untuk tiap jenis sistem operasi. Panduan	instalasi Golang sebenarnya	sudah	disediakan,	bisa dilihat di	situs	officialnya	http://golang.org/doc/install#install.
 ### 2.3 INSTALASI GIT
+
 
 ## CHAPTER 3 MENYIAPKAN DATABASW DENGAN MONGODB
 ### MEMBUAT AKUN MONGODB
