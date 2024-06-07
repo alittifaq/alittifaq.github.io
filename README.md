@@ -9,6 +9,12 @@ Buku ini disusun dengan tujuan sebagai panduan praktis untuk mengembangkan sebua
 ## CHAPTER 2 PERSIAPAN LINGKUNGAN PENGEMBANGAN
 
 ### 2.1 INSTALASI VISUAL STUDIA CODE
+Visual Studio Code adalah sebuah
+teks editor ringan dan handal yang dibuat
+oleh Microsoft untuk sistem operasi
+multiplatform, artinya tersedia juga untuk
+versi Linux, Mac, dan Windows. 
+Untuk menginstal kunjungi situs resmi Visual Stusio Code. Anda bisa menikuti tautan ini https://code.visualstudio.com/
 ### 2.2 INSTALASI GOLANG
 ### 2.3 INSTALASI GIT
 
