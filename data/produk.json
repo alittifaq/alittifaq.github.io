@@ -1,0 +1,17 @@
+{
+    "produk": [
+      {
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/rasberi.png",
+        "nama": "Rasberi"
+      },
+      {
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/orange.png",
+        "nama": "Orange"
+      },
+      {
+        "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/strawberry.png",
+        "nama": "Strawberry"
+      }
+    ]
+  }
+     

@@ -1,0 +1,19 @@
+{ 
+    "gallery": [
+    {
+      "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0015.jpg",
+      "judul_kegiatan": "Kegiatan 1",
+      "tahun": "2020"
+    },
+    {
+      "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0020.jpg",
+      "judul_kegiatan": "Kegiatan 2",
+      "tahun": "2021"
+    },
+    {
+      "foto": "https://github.com/alittifaq/alittifaq.github.io/blob/main/img/IMG-20240424-WA0027.jpg",
+      "judul_kegiatan": "Kegiatan 3",
+      "tahun": "2022"
+    }
+  ]
+}
