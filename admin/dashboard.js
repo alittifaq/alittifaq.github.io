@@ -27,12 +27,6 @@ function loadProducts() {
         <button onclick="addProduct()">Add Product</button>
     `;
 
-    // Contoh data produk (seharusnya diambil dari server atau database)
-    const products = [
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/rasberi.png', nama: 'Rasberi' },
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/orange.png', nama: 'Orange' },
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/strawberry.png', nama: 'Strawberry' }
-    ];
 
     const productTableBody = document.getElementById('product-table-body');
     products.forEach((product, index) => {
@@ -72,13 +66,6 @@ function loadGallery() {
         </div>
         <button onclick="addGalleryItem()">Add Gallery Item</button>
     `;
-
-    // Contoh data galeri (seharusnya diambil dari server atau database)
-    const gallery = [
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/rasberi.png', judul: 'Kegiatan 1', tahun: '2023' },
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/orange.png', judul: 'Kegiatan 2', tahun: '2022' },
-        { foto: 'https://github.com/alittifaq/alittifaq.github.io/blob/main/img/strawberry.png', judul: 'Kegiatan 3', tahun: '2021' }
-    ];
 
     const galleryTableBody = document.getElementById('gallery-table-body');
     gallery.forEach((item, index) => {
