@@ -322,6 +322,14 @@
   color: var(--primary);
 }
 
+.product-item img {
+  width: 100%; /* Atur lebar gambar menjadi 100% dari kontainer */
+  height: 50%; /* Biarkan tinggi gambar mengikuti proporsi aslinya */
+}
+
+
+
+
 /*** About ***/
 .video {
   background: linear-gradient(
