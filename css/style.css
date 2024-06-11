@@ -549,7 +549,7 @@
 }
 
 .custom-color {
-  color: #c9b561;
+  color: var(--sec);
 }
 
 /*** Contact ***/
