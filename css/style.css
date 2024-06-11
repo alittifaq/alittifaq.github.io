@@ -529,6 +529,34 @@
 }
 
 /*** Store ***/
+.store-item {
+  position: relative;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 30px;
+}
+
+.store-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.store-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.store-item:hover img {
+  transform: scale(1.05);
+}
+
 .store-item .store-overlay {
   position: absolute;
   top: 0;
@@ -541,7 +569,8 @@
   justify-content: center;
   background: rgba(138, 180, 78, 0.3);
   opacity: 0;
-  transition: 0.5s;
+  border-radius: 10px;
+  transition: opacity 0.5s;
 }
 
 .store-item:hover .store-overlay {
@@ -551,6 +580,7 @@
 .custom-color {
   color: var(--sec);
 }
+
 
 /*** Contact ***/
 .contact .btn-square {
