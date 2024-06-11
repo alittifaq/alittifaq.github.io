@@ -322,10 +322,12 @@
   color: var(--primary);
 }
 
-.product-item img {
-  width: 50%; /* Atur lebar gambar menjadi 100% dari kontainer */
-  height: 50%; /* Biarkan tinggi gambar mengikuti proporsi aslinya */
+.image-container img {
+  width: 200px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  object-fit: cover; /* Maintain aspect ratio and fill */
 }
+
 
 
 
