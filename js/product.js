@@ -4,7 +4,7 @@ import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croo
 const urlproduct = "https://www.blkkalittifaq.id/data/produk.json";
 getJSON(urlproduct, "login", "", getProductFunction);
 
-function getproductFunction(result) {
+function getProductFunction(result) {
   let product = result.data;
   let htmlproduct = "";
   product.forEach(function (product) {
