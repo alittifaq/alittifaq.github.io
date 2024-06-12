@@ -7,7 +7,7 @@ getJSON(urlgallery, "login", "", getGalleryFunction);
 function getGalleryFunction(result) {
   let gallery = result.data;
   let htmlgallery = "";
-  data.forEach(function (gallery) {
+  gallery.forEach(function (gallery) {
     let tem = figuregallery
       .replace("##foto##", gallery.foto)
       .replace("##judul_kegiatan##", gallery.judul_kegiatan)
