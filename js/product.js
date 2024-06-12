@@ -20,9 +20,9 @@ function getProductFunction(result) {
 let figureproduct = `
 <div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
             <div class="store-item position-relative text-center">
-              <img id="foto"class="img-fluid" src="img/kukis.jpg" alt="" />
+              <img id="foto"class="img-fluid" src="##foto##" alt="" />
               <div class="pt-3">
-                <h4 id="nama" class="mb-3 custom-color">Vanilla Chocochips Muffin</h4>
+                <h4 id="nama" class="mb-3 custom-color">##nama##</h4>
               </div>
               <div class="store-overlay">
                 <a href="" class="btn btn-primary rounded-pill py-2 px-4 m-2"
