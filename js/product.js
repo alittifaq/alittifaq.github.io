@@ -1,7 +1,7 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
 import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
 
-const urlproduct = "https://www.blkkalittifaq.id/data/produk.json";
+const urlproduct = "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/product";
 getJSON(urlproduct, "login", "", getProductFunction);
 
 function getProductFunction(result) {

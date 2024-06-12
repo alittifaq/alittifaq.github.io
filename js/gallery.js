@@ -1,7 +1,7 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
 import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
 
-const urlgallery = "https://www.blkkalittifaq.id/data/gallery.json";
+const urlgallery = "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/gallery";
 getJSON(urlgallery, "login", "", getGalleryFunction);
 
 function getGalleryFunction(result) {
