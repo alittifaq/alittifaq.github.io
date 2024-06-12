@@ -9,8 +9,22 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
     
 }
+
+#registerForm {
+    margin-bottom: 20px; /* Menambahkan margin bawah agar ada ruang antara formulir dan tulisan */
+}
+
+a {
+    position: absolute;
+    left: 50%;
+    bottom: -20px; /* Menggeser tulisan ke atas agar tampil di bawah tengah */
+    transform: translateX(-50%); /* Menggeser tulisan ke kiri agar berada di tengah */
+    text-decoration: none; /
+}
+
 body {
     display: flex;
     justify-content: center;
