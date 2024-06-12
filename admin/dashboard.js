@@ -6,7 +6,7 @@ document.getElementById('gallery-tab').addEventListener('click', function() {
     loadGallery();
 });
 
-function loadProducts() {
+async function loadProducts() {
     const content = document.getElementById('content');
     content.innerHTML = `
         <h2>Products</h2>
@@ -27,25 +27,30 @@ function loadProducts() {
         <button onclick="addProduct()">Add Product</button>
     `;
 
-
-    const productTableBody = document.getElementById('product-table-body');
-    products.forEach((product, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><img src="${product.foto}" alt="${product.nama}" width="50"></td>
-            <td>${product.nama}</td>
-            <td>
-                <div class="action-buttons">
-                    <button onclick="editProduct(${index})">Edit</button>
-                    <button class="delete" onclick="deleteProduct(${index})">Delete</button>
-                </div>
-            </td>
-        `;
-        productTableBody.appendChild(row);
-    });
+    try {
+        const response = await fetch('/api/products');
+        const products = await response.json();
+        const productTableBody = document.getElementById('product-table-body');
+        products.forEach((product, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${product.foto}" alt="${product.nama}" width="50"></td>
+                <td>${product.nama}</td>
+                <td>
+                    <div class="action-buttons">
+                        <button onclick="editProduct(${index})">Edit</button>
+                        <button class="delete" onclick="deleteProduct(${index})">Delete</button>
+                    </div>
+                </td>
+            `;
+            productTableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error loading products:', error);
+    }
 }
 
-function loadGallery() {
+async function loadGallery() {
     const content = document.getElementById('content');
     content.innerHTML = `
         <h2>Gallery</h2>
@@ -67,54 +72,66 @@ function loadGallery() {
         <button onclick="addGalleryItem()">Add Gallery Item</button>
     `;
 
-    const galleryTableBody = document.getElementById('gallery-table-body');
-    gallery.forEach((item, index) => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-            <td><img src="${item.foto}" alt="${item.judul}" width="50"></td>
-            <td>${item.judul}</td>
-            <td>${item.tahun}</td>
-            <td>
-                <div class="action-buttons">
-                    <button onclick="editGalleryItem(${index})">Edit</button>
-                    <button class="delete" onclick="deleteGalleryItem(${index})">Delete</button>
-                </div>
-            </td>
-        `;
-        galleryTableBody.appendChild(row);
-    });
+    try {
+        const response = await fetch('/api/gallery');
+        const gallery = await response.json();
+        const galleryTableBody = document.getElementById('gallery-table-body');
+        gallery.forEach((item, index) => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${item.foto}" alt="${item.judul}" width="50"></td>
+                <td>${item.judul}</td>
+                <td>${item.tahun}</td>
+                <td>
+                    <div class="action-buttons">
+                        <button onclick="editGalleryItem(${index})">Edit</button>
+                        <button class="delete" onclick="deleteGalleryItem(${index})">Delete</button>
+                    </div>
+                </td>
+            `;
+            galleryTableBody.appendChild(row);
+        });
+    } catch (error) {
+        console.error('Error loading gallery:', error);
+    }
 }
 
 function logout() {
     window.location.href = 'login.html';
 }
 
-function addProduct() {
+async function addProduct() {
     // Implementasi fungsi untuk menambah produk baru
     alert('Add Product');
+    // Example: await fetch('/api/products', { method: 'POST', body: JSON.stringify(productData) });
 }
 
-function editProduct(index) {
+async function editProduct(index) {
     // Implementasi fungsi untuk mengedit produk
     alert(`Edit Product ${index}`);
+    // Example: await fetch(`/api/products/${index}`, { method: 'PUT', body: JSON.stringify(productData) });
 }
 
-function deleteProduct(index) {
+async function deleteProduct(index) {
     // Implementasi fungsi untuk menghapus produk
     alert(`Delete Product ${index}`);
+    // Example: await fetch(`/api/products/${index}`, { method: 'DELETE' });
 }
 
-function addGalleryItem() {
+async function addGalleryItem() {
     // Implementasi fungsi untuk menambah item galeri baru
     alert('Add Gallery Item');
+    // Example: await fetch('/api/gallery', { method: 'POST', body: JSON.stringify(galleryData) });
 }
 
-function editGalleryItem(index) {
+async function editGalleryItem(index) {
     // Implementasi fungsi untuk mengedit item galeri
     alert(`Edit Gallery Item ${index}`);
+    // Example: await fetch(`/api/gallery/${index}`, { method: 'PUT', body: JSON.stringify(galleryData) });
 }
 
-function deleteGalleryItem(index) {
+async function deleteGalleryItem(index) {
     // Implementasi fungsi untuk menghapus item galeri
     alert(`Delete Gallery Item ${index}`);
+    // Example: await fetch(`/api/gallery/${index}`, { method: 'DELETE' });
 }
