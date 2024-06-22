@@ -616,9 +616,9 @@
 }
 
 .testimonial-item img {
-  width: 60px !important;
-  height: 60px !important;
-  border-radius: 60px;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0;
 }
 
 .testimonial-carousel .owl-dots {
@@ -641,7 +641,7 @@
 
 .testimonial-carousel .owl-dot.active {
   width: 30px;
-  background: var(--dark);
+  background: var(--sec);
 }
 
 /*** Footer ***/
