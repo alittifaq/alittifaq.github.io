@@ -1,7 +1,8 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
 import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
 
-const urlproduct = "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/product";
+const urlproduct =
+  "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/product";
 getJSON(urlproduct, "login", "", getProductFunction);
 
 function getProductFunction(result) {
@@ -25,7 +26,7 @@ let figureproduct = `
                 <h4 id="nama" class="mb-3 custom-color">##nama##</h4>
               </div>
               <div class="store-overlay">
-                <a href="" class="btn btn-primary rounded-pill py-2 px-4 m-2"
+                <a href="https://shopee.co.id/Jam-Tangan-cat.11042900" class="btn btn-primary rounded-pill py-2 px-4 m-2"
                   >More Detail <i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>
