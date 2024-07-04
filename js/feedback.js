@@ -25,48 +25,29 @@ function showFeedbacks() {
     feedbackItem.innerHTML = `
             <div class="feedback-rating">${stars}</div>
             <p>${feedback.content}</p>
-            ${
-              isFeedbackOwner(feedback) ?
-              `<button class="btn btn-sm btn-danger delete-btn">Delete</button>
-               <button class="btn btn-sm btn-primary edit-btn">Edit</button>` : ''
-            }
+            <button class="btn btn-sm btn-danger delete-btn">Delete</button>
+            <button class="btn btn-sm btn-primary edit-btn">Edit</button>
         `;
 
     // Tambahkan feedback ke dalam daftar
     feedbackList.appendChild(feedbackItem);
-
-    // Tambahkan event listener untuk tombol delete
-    const deleteButton = feedbackItem.querySelector(".delete-btn");
-    if (deleteButton) {
-      deleteButton.addEventListener("click", () => {
-        if (isFeedbackOwner(feedback)) {
-          deleteFeedback(index);
-        } else {
-          alert("Anda tidak memiliki izin untuk menghapus feedback ini.");
-        }
-      });
-    }
-
-    // Tambahkan event listener untuk tombol edit
-    const editButton = feedbackItem.querySelector(".edit-btn");
-    if (editButton) {
-      editButton.addEventListener("click", () => {
-        if (isFeedbackOwner(feedback)) {
-          showEditForm(index);
-        } else {
-          alert("Anda tidak memiliki izin untuk mengedit feedback ini.");
-        }
-      });
-    }
   });
-}
 
-// Fungsi untuk mengecek apakah pengguna adalah pemilik feedback
-function isFeedbackOwner(feedback) {
-  // Gantikan dengan logika autentikasi dan otorisasi yang sesuai
-  // Misalnya, bandingkan dengan pengguna yang saat ini login atau memiliki token khusus
-  // Contoh sederhana: cek apakah pengguna sudah mengirimkan feedback ini
-  return feedback.sender === 'nama_pengguna_yang_diizinkan';
+  // Tambahkan event listener untuk tombol delete di luar loop
+  const deleteButtons = document.querySelectorAll(".delete-btn");
+  deleteButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      deleteFeedback(index);
+    });
+  });
+
+  // Tambahkan event listener untuk tombol edit
+  const editButtons = document.querySelectorAll(".edit-btn");
+  editButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      showEditForm(index);
+    });
+  });
 }
 
 // Fungsi untuk menampilkan form edit feedback
@@ -165,7 +146,6 @@ document
     const newFeedback = {
       rating: parseInt(rating),
       content: feedbackContent,
-      sender: 'nama_pengguna_yang_diizinkan' // Ganti dengan pengguna yang saat ini login atau pengirim feedback
     };
 
     // Tambahkan feedback ke array
