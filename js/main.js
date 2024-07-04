@@ -45,7 +45,6 @@
     }
   });
 
-
   // Menambahkan fungsi klik pada tombol "back to top"
   $(".back-to-top").click(function () {
     // Menggulir halaman kembali ke atas dengan animasi
@@ -54,31 +53,32 @@
   });
 
   // Gallery Hidden
- // Menambahkan event listener pada tombol "Load More"
- document.getElementById("loadMoreBtn").addEventListener("click", function () {
-  // Mendapatkan semua elemen galeri yang tersembunyi
-  var hiddenItems = document.querySelectorAll(".gallery-item.hidden");
-  // Menampilkan setiap item galeri yang tersembunyi
-  hiddenItems.forEach(function (item) {
-    item.classList.remove("hidden");
+  // Menambahkan event listener pada tombol "Load More"
+  document.getElementById("loadMoreBtn").addEventListener("click", function () {
+    // Mendapatkan semua elemen galeri yang tersembunyi
+    var hiddenItems = document.querySelectorAll(".gallery-item.hidden");
+    // Menampilkan setiap item galeri yang tersembunyi
+    hiddenItems.forEach(function (item) {
+      item.classList.remove("hidden");
+    });
+    // Menyembunyikan tombol "Load More" setelah diklik
+    this.style.display = "none";
   });
-  // Menyembunyikan tombol "Load More" setelah diklik
-  this.style.display = "none";
-});
-})(jQuery);
 
   // Modal Video
-  var $videoSrc;
+  var $videoSrc; // Variabel untuk menyimpan sumber video
   $(".btn-play").click(function () {
     $videoSrc = $(this).data("src");
+    console.log($videoSrc);
   });
-  console.log($videoSrc);
+
   $("#videoModal").on("shown.bs.modal", function (e) {
     $("#video").attr(
       "src",
       $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
     );
   });
+
   $("#videoModal").on("hide.bs.modal", function (e) {
     $("#video").attr("src", $videoSrc);
   });
