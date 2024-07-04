@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+  width: fit-content;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
