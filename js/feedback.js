@@ -1,6 +1,9 @@
 import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
 import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
 
+// Definisikan variabel feedbacks di luar event listener
+let feedbacks = [];
+
 document.addEventListener("DOMContentLoaded", function () {
   const feedbackUrl =
     "https://asia-southeast2-blkkalittifaq-426014.cloudfunctions.net/blkkalittifaq/data/feedback";
@@ -8,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
   getJSON(feedbackUrl, "login", "", renderFeedback);
 
   function renderFeedback(result) {
-    let feedbacks = result.data;
+    feedbacks = result.data; // Update feedbacks dari hasil getJSON
     let htmlFeedbacks = "";
 
     feedbacks.forEach(function (feedback) {
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         rating: parseInt(rating.value),
         content: feedback.value.trim(),
       };
-      // Simulasi tambah feedback ke daftar
+      // Simpan newFeedback ke dalam array feedbacks
       feedbacks.push(newFeedback);
       // Render ulang daftar feedback
       renderFeedback({ data: feedbacks });
