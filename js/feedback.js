@@ -1,7 +1,9 @@
-import { getJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
+import {
+  getJSON,
+  postJSON,
+} from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
 import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
 
-// Definisikan variabel feedbacks di luar event listener
 let feedbacks = [];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   getJSON(feedbackUrl, "login", "", renderFeedback);
 
   function renderFeedback(result) {
-    feedbacks = result.data; // Update feedbacks dari hasil getJSON
+    feedbacks = result.data;
     let htmlFeedbacks = "";
 
     feedbacks.forEach(function (feedback) {
@@ -43,21 +45,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const feedback = document.getElementById("feedback");
 
     if (rating && feedback.value.trim() !== "") {
-      // Kirim feedback ke backend (contoh sederhana tanpa implementasi API)
-      alert("Feedback berhasil dikirim!");
-      // Anda bisa tambahkan kode untuk mengirim feedback ke backend di sini
-      // Misalnya menggunakan fetch atau XMLHttpRequest
-      // Setelah berhasil, tambahkan feedback ke daftar yang ada
       const newFeedback = {
         rating: parseInt(rating.value),
         content: feedback.value.trim(),
       };
-      // Simpan newFeedback ke dalam array feedbacks
-      feedbacks.push(newFeedback);
-      // Render ulang daftar feedback
-      renderFeedback({ data: feedbacks });
-      // Reset form
-      feedbackForm.reset();
+
+      // Kirim data feedback ke backend
+      postJSON(feedbackUrl, "login", newFeedback, function (response) {
+        if (response.success) {
+          alert("Feedback berhasil dikirim!");
+          // Tambahkan feedback baru ke daftar
+          feedbacks.push(newFeedback);
+          // Render ulang daftar feedback
+          renderFeedback({ data: feedbacks });
+          // Reset form
+          feedbackForm.reset();
+        } else {
+          alert("Gagal mengirim feedback. Silakan coba lagi.");
+        }
+      });
     } else {
       alert("Mohon lengkapi rating dan saran Anda!");
     }
