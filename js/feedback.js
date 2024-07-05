@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       // Kirim data feedback ke backend
-      postJSON(feedbackUrl, "login", newFeedback)
+      postJSON(feedbackUrl, "feedback", newFeedback)
         .then((response) => {
           if (response.success) {
             alert("Feedback berhasil dikirim!");
