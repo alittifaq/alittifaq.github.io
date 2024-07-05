@@ -52,19 +52,6 @@
     return false; // Mencegah aksi default dari link
   });
 
-  // Gallery Hidden
-  // Menambahkan event listener pada tombol "Load More"
-  document.getElementById("loadMoreBtn").addEventListener("click", function () {
-    // Mendapatkan semua elemen galeri yang tersembunyi
-    var hiddenItems = document.querySelectorAll(".gallery-item.hidden");
-    // Menampilkan setiap item galeri yang tersembunyi
-    hiddenItems.forEach(function (item) {
-      item.classList.remove("hidden");
-    });
-    // Menyembunyikan tombol "Load More" setelah diklik
-    this.style.display = "none";
-  });
-
   // Modal Video
   var $videoSrc; // Variabel untuk menyimpan sumber video
   $(".btn-play").click(function () {
