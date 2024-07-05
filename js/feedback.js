@@ -35,12 +35,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Ambil feedback dari server saat halaman dimuat
   fetch(feedbackUrl)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
       feedbacks = data;
       renderFeedback();
     })
-    .catch((error) => console.error("Error fetching feedback:", error));
+    .catch((error) => {
+      console.error("Error fetching feedback:", error);
+      alert("Gagal mengambil feedback dari server. Silakan coba lagi.");
+    });
 
   // Tangani submit form feedback
   const feedbackForm = document.getElementById("feedbackForm");
@@ -48,16 +56,16 @@ document.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
 
     const rating = document.querySelector('input[name="rating"]:checked');
-    const feedback = document.getElementById("feedback");
+    const feedbackContent = document.getElementById("feedback");
 
-    if (rating && feedback.value.trim() !== "") {
+    if (rating && feedbackContent.value.trim() !== "") {
       const newFeedback = {
         rating: parseInt(rating.value),
-        content: feedback.value.trim(),
+        content: feedbackContent.value.trim(),
       };
 
       // Kirim data feedback ke backend
-      postJSON(feedbackUrl, "feedback", newFeedback)
+      postJSON(feedbackUrl, "login", newFeedback)
         .then((response) => {
           if (response.success) {
             alert("Feedback berhasil dikirim!");
