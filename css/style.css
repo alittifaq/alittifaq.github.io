@@ -325,6 +325,13 @@
   object-fit: cover; /* Maintain aspect ratio and fill */
 }
 
+.product-category-row {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  margin-bottom: 20px;
+}
+
 /*** About ***/
 .video {
   background: linear-gradient(
