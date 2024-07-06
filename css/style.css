@@ -602,6 +602,16 @@
   border-radius: 50px;
 }
 
+/*** Daftar ***/
+.daftar {
+  background: linear-gradient(
+      rgba(136, 180, 78, 0.85),
+      rgba(136, 180, 78, 0.85)
+    ),
+    url(../img/Pelatihan-1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
 /*** Testimonial ***/
 .testimonial {
   background: linear-gradient(
