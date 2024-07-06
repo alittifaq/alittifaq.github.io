@@ -412,10 +412,9 @@
 
 .gallery-item {
   position: relative;
-  margin: 1.5%; /* Sesuaikan margin agar sesuai dengan layout */
-  overflow: hidden;
-  width: 22%; /* Empat kolom per baris */
-  height: 200px; /* Tetapkan tinggi tetap untuk memastikan ukuran seragam */
+  margin: 0.5%; /* Sesuaikan margin agar sesuai dengan layout */
+  width: 32%; /* Tetapkan lebar item menjadi sepertiga dari kontainer */
+  height: auto; /* Otomatis menyesuaikan tinggi berdasarkan proporsi gambar */
   border-radius: 15px; /* Membuat efek rounded */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease; /* Efek zoom in */
@@ -423,41 +422,31 @@
 
 @media (max-width: 991.98px) {
   .gallery-item {
-    width: 30%; /* Tiga kolom per baris untuk layar medium */
-    height: 200px; /* Tetapkan tinggi tetap */
-    margin: 1%; /* Sesuaikan margin agar sesuai dengan layout */
+    width: 32%; /* Tetap tiga kolom per baris untuk layar medium */
   }
 }
 
 @media (max-width: 768px) {
   .gallery-item {
-    width: 30% !important; /* Tiga kolom per baris untuk layar kecil */
-    height: 200px; /* Tetapkan tinggi tetap */
-    margin: 1.66% !important; /* Sesuaikan margin agar sesuai dengan layout */
-  }
-
-  .gallery-item figcaption {
-    font-size: 0.6em !important; /* Ukuran teks yang lebih kecil untuk layar kecil */
+    width: 32% !important; /* Tetap tiga kolom per baris untuk layar kecil */
   }
 }
 
 @media (max-width: 480px) {
   .gallery-item {
-    width: 30% !important; /* Tiga kolom per baris untuk layar sangat kecil */
-    height: 200px; /* Tetapkan tinggi tetap */
-    margin: 1.66% !important; /* Sesuaikan margin agar sesuai dengan layout */
+    width: 32% !important; /* Tetap tiga kolom per baris untuk layar sangat kecil */
   }
 
   .gallery-item figcaption {
-    font-size: 0.5em !important; /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
+    font-size: 0.8em !important; /* Ukuran teks yang lebih kecil untuk layar sangat kecil */
   }
 }
 
 .gallery-item img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Memotong gambar agar sesuai dengan container */
+  height: auto; /* Menyesuaikan tinggi secara proporsional */
+  object-fit: contain; /* Menjaga proporsi gambar agar tidak terpotong */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Efek zoom in */
   border-radius: 15px; /* Membuat efek rounded */
 }
@@ -496,9 +485,6 @@
   opacity: 1;
 }
 
-.hidden {
-  display: none;
-}
 /* Gallery */
 
 .modal-video .modal-dialog {
@@ -577,6 +563,35 @@
 
 .custom-color {
   color: var(--sec);
+}
+
+.s-container {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.s-item {
+  flex: 0 0 auto;
+  width: calc(33.333% - 10px);
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .s-item {
+    width: calc(80% - 10px); /* Atur lebar produk untuk tampilan seluler */
+  }
+}
+
+/* Hilangkan scrollbar di perangkat tertentu (opsional) */
+.s-container::-webkit-scrollbar {
+  display: none;
+}
+.s-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /*** Contact ***/
