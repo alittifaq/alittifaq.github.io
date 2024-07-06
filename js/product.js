@@ -7,15 +7,27 @@ getJSON(urlproduct, "login", "", getProductFunction);
 
 function getProductFunction(result) {
   let product = result.data;
-  let htmlproduct = "";
+  let sayurHtml = "";
+  let buahHtml = "";
+  let olahanHtml = "";
+
   product.forEach(function (product) {
     let tem = figureproduct
       .replace("##foto##", product.foto)
       .replace("##nama##", product.nama);
-    htmlproduct += tem;
-    console.log(product);
-  });
-  setInner("product", htmlproduct);
+
+   if (product.kategori === "sayur") {
+            sayurHtml += tem;
+        } else if (product.kategori === "buah") {
+            buahHtml += tem;
+        } else if (product.kategori === "olahan") {
+            olahanHtml += tem;
+        }
+    });
+
+    setInner("sayurProduct", sayurHtml);
+    setInner("buahProduct", buahHtml);
+    setInner("olahanProduct", olahanHtml);
 }
 
 let figureproduct = `
