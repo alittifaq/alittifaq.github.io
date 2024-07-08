@@ -195,9 +195,10 @@
 }
 
 /* Menambahkan padding pada elemen body untuk layar kecil */
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   body {
-    padding: 0 10px;
+    font-size: 16px;
+    padding: 10px;
   }
 
   .container,
@@ -210,7 +211,11 @@
   }
 
   .navbar .navbar-brand {
-    font-size: 24px; /* Memperbesar logo atau brand */
+    font-size: 1.2rem; /* Memperbesar logo atau brand */
+  }
+
+  .navbar .navbar-nav .nav-link {
+    font-size: 1rem; /* Contoh penyesuaian ukuran font link navbar */
   }
 
   .navbar-toggler {
@@ -219,6 +224,11 @@
 
   .product-item {
     margin-bottom: 20px; /* Menambahkan spasi antar produk */
+  }
+
+  .product-category-row {
+    flex-direction: column; /* Ubah tata letak menjadi kolom untuk tampilan yang lebih baik di layar kecil */
+    align-items: center; /* Pusatkan item */
   }
 
   .store-item {
@@ -230,6 +240,11 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+  .category-title {
+    font-size: 20px; /* Sesuaikan ukuran font kategori */
+    text-align: center; /* Pusatkan teks judul kategori */
   }
 
   /* Memperbesar ukuran teks di layar kecil */
