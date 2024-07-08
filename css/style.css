@@ -231,7 +231,7 @@
   background-size: cover;
 }
 
-.page-header-store {
+.page-header-product {
   background: linear-gradient(rgba(78, 80, 60, 0.5), rgb(122, 192, 93, 0.5)),
     url(../img/bgpd2.jpg) center center no-repeat;
   background-size: cover;
@@ -540,8 +540,8 @@
 }
 
 .store-item img {
-  width: 100%;
-  height: 250px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -649,6 +649,30 @@
   text-align: center;
   background: #ffffff;
   border: 30px solid var(--primary);
+}
+
+.daftar-item {
+  margin: 0 auto; /* Membuat elemen berada di tengah secara horizontal */
+  max-width: 1000px;
+  height: auto;
+  background: #ffffff;
+  border: 30px solid var(--primary);
+  display: flex; /* Menggunakan flexbox */
+  flex-direction: column; /* Tampilan vertikal */
+  justify-content: center; /* Tengah secara vertikal */
+  align-items: center; /* Tengah secara horizontal */
+  text-align: center; /* Untuk rata tengah teks di dalam */
+  padding: 20px; /* Ruang di dalam elemen */
+}
+
+.daftar-item p {
+  margin-bottom: 10px; /* Jarak antara paragraf */
+  text-align: justify;
+}
+
+.daftar-item .btn {
+  margin-top: 10px; /* Jarak antara teks dan tombol */
+  display: inline-block; /* Biar tombol di tengah */
 }
 
 .image-tes {

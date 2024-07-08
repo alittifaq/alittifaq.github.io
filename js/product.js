@@ -31,7 +31,7 @@ function getProductFunction(result) {
 }
 
 let figureproduct = `
-<div class="col-lg-4 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+<div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.1s">
             <div class="store-item position-relative text-center">
               <img id="foto"class="img-fluid" src="##foto##" alt="" />
               <div class="pt-3">
