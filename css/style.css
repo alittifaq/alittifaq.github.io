@@ -122,8 +122,9 @@
 }
 
 @media (max-width: 991.98px) {
-  .container {
-    padding: 0 10px; /* Mengurangi spasi kosong di kanan dan kiri */
+  .container, .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .navbar .navbar-brand {
@@ -175,18 +176,18 @@
 /* Menambahkan padding pada elemen body untuk layar kecil */
 @media (max-width: 576px) {
   body {
-    padding: 0 10px;
+    padding: 0 5px;
   }
 
-  .container {
-    padding: 0;
+  .container, .container-fluid {
+    padding: 0 5px; /* Mengurangi padding pada container */
   }
 
   .navbar {
     padding: 0;
   }
 
-  .navbar-brand {
+  .navbar .navbar-brand {
     font-size: 24px; /* Memperbesar logo atau brand */
   }
 
@@ -207,6 +208,15 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+  }
+
+   /* Memperbesar ukuran teks di layar kecil */
+   h1, h2, h3, h4, h5, h6 {
+    font-size: larger;
+  }
+
+  p, a, span, div {
+    font-size: larger;
   }
 
   /* Menghapus margin dan padding dari header */
