@@ -122,10 +122,9 @@
 }
 
 @media (max-width: 991.98px) {
-  .container,
-  .container-fluid {
-    padding-left: 6px;
-    padding-right: 6px;
+
+  .container {
+    padding: 0 10px; /* Mengurangi spasi kosong di kanan dan kiri */
   }
 
   .navbar .navbar-brand {
@@ -146,26 +145,6 @@
 
   .user-icon {
     padding: 10px;
-  }
-
-  /* Memperbesar ukuran teks di layar kecil */
-  h1 {
-    font-size: 1.75rem; /* Lebih besar dari ukuran standar */
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p,
-  a,
-  span,
-  div {
-    font-size: 1rem; /* Sedikit lebih besar dari ukuran standar */
   }
 }
 
@@ -194,92 +173,9 @@
   justify-content: center;
 }
 
-/* Menambahkan padding pada elemen body untuk layar kecil */
-@media (min-width: 576px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
 
-  .container,
-  .container-fluid {
-    padding: 0 10px; /* Mengurangi padding pada container */
-  }
-
-  .navbar {
-    padding: 0;
-  }
-
-  .navbar .navbar-brand {
-    font-size: 1.2rem; /* Memperbesar logo atau brand */
-  }
-
-  .navbar .navbar-nav .nav-link {
-    font-size: 1rem; /* Contoh penyesuaian ukuran font link navbar */
-  }
-
-  .navbar-toggler {
-    font-size: 18px; /* Memperbesar tombol burger menu */
-  }
-
-  .product-item {
-    margin-bottom: 20px; /* Menambahkan spasi antar produk */
-  }
-
-  .product-category-row {
-    flex-direction: column; /* Ubah tata letak menjadi kolom untuk tampilan yang lebih baik di layar kecil */
-    align-items: center; /* Pusatkan item */
-  }
-
-  .store-item {
-    margin: 0 auto; /* Memastikan item ditengah pada layar kecil */
-    max-width: 100%;
-  }
-
-  .store-item img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-
-  .category-title {
-    font-size: 20px; /* Sesuaikan ukuran font kategori */
-    text-align: center; /* Pusatkan teks judul kategori */
-  }
-
-  /* Memperbesar ukuran teks di layar kecil */
-  h1 {
-    font-size: 1.75rem; /* Lebih besar dari ukuran standar */
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-  }
-
-  p,
-  a,
-  span,
-  div {
-    font-size: 1rem; /* Sedikit lebih besar dari ukuran standar */
-  }
-
-  /* Menghapus margin dan padding dari header */
-  #header-carousel .carousel-item {
-    position: relative;
-    min-height: 450px;
-  }
-
-  #header-carousel .carousel-item img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
+/* Ensure the icon is visible on small devices */
+@media (max-width: 576px) {
   .border-start {
     border-left: none;
     border-top: 1px solid #eee;
@@ -439,6 +335,7 @@
   overflow-x: scroll;
   margin-bottom: 70px;
 }
+
 
 .category-title {
   font-size: 24px; /* Ukuran font */
