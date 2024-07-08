@@ -122,29 +122,19 @@
 }
 
 @media (max-width: 991.98px) {
-
-  .container {
-    padding: 0 10px; /* Mengurangi spasi kosong di kanan dan kiri */
-  }
-
   .navbar .navbar-brand {
-    width: 100px;
-    height: 80px;
+    width: 126px;
+    height: 100px;
   }
 
   .navbar .navbar-nav .nav-link {
     margin-right: 0;
     padding: 10px 0;
-    font-size: 16px; /* Memperbesar teks navigasi */
   }
 
   .navbar .navbar-nav {
     margin-top: 75px;
     border-top: 1px solid #eeeeee;
-  }
-
-  .user-icon {
-    padding: 10px;
   }
 }
 
@@ -173,6 +163,12 @@
   justify-content: center;
 }
 
+/* Add additional styling for smaller screens */
+@media (max-width: 991.98px) {
+  .user-icon {
+    padding: 10px;
+  }
+}
 
 /* Ensure the icon is visible on small devices */
 @media (max-width: 576px) {
