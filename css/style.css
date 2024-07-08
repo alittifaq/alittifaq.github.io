@@ -122,9 +122,10 @@
 }
 
 @media (max-width: 991.98px) {
-  .container, .container-fluid {
-    padding-left: 10px;
-    padding-right: 10px;
+  .container,
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   .navbar .navbar-brand {
@@ -176,11 +177,12 @@
 /* Menambahkan padding pada elemen body untuk layar kecil */
 @media (max-width: 576px) {
   body {
-    padding: 0 5px;
+    padding: 0 10px;
   }
 
-  .container, .container-fluid {
-    padding: 0 5px; /* Mengurangi padding pada container */
+  .container,
+  .container-fluid {
+    padding: 0 10px; /* Mengurangi padding pada container */
   }
 
   .navbar {
@@ -210,13 +212,24 @@
     object-fit: cover;
   }
 
-   /* Memperbesar ukuran teks di layar kecil */
-   h1, h2, h3, h4, h5, h6 {
-    font-size: larger;
+  /* Memperbesar ukuran teks di layar kecil */
+  h1 {
+    font-size: 1.75rem; /* Lebih besar dari ukuran standar */
   }
 
-  p, a, span, div {
-    font-size: larger;
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  p,
+  a,
+  span,
+  div {
+    font-size: 1rem; /* Sedikit lebih besar dari ukuran standar */
   }
 
   /* Menghapus margin dan padding dari header */
