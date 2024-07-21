@@ -98,6 +98,20 @@
       },
     },
   });
+  //about
+  document.addEventListener('DOMContentLoaded', () => {
+    const wraps = document.querySelectorAll('.wrap, .wrap-2');
+    
+    wraps.forEach(wrap => {
+      wrap.addEventListener('click', () => {
+        // Remove 'active' class from all wraps
+        wraps.forEach(el => el.classList.remove('active'));
+        
+        // Add 'active' class to the clicked wrap
+        wrap.classList.add('active');
+      });
+    });
+  });
 
   // Testimonial carousel
   $(".testimonial-carousel").owlCarousel({

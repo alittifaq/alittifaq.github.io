@@ -283,6 +283,85 @@
 .section-title.text-center::after {
   left: calc(50% - 13px);
 }
+/*** About-program ***/
+.wrap,
+.wrap-2 {
+  position: relative;
+  overflow: hidden; /* Pastikan tidak ada konten yang melampaui kontainer */
+  width: 100%;
+}
+
+.wrap img {
+  max-width: 40%;
+  height: 33%;
+  object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak rasio aspek */
+  transition: transform 1s ease;
+}
+.wrap-2 img {
+  max-width: 60%;
+  height: auto;
+  object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak rasio aspek */
+  transition: transform 1s ease;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%; /* Pastikan konten mengisi tinggi kontainer */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  color: black;
+  transition: left 1s;
+  background: rgb(255, 255, 255);
+  padding: 2em;
+  box-sizing: border-box;
+  overflow-y: auto; /* Menambahkan scroll jika konten terlalu panjang */
+}
+
+/* Gambar hanya bergerak ketika kelas aktif ditambahkan */
+.wrap.active img,
+.wrap-2.active img {
+  transform: translateX(-100%);
+}
+
+.wrap.active .content,
+.wrap-2.active .content {
+  left: 0; /* Teks bergerak masuk ketika kelas aktif ditambahkan */
+}
+
+@media (max-width: 768px) {
+  .wrap img {
+    max-width: 50%; /* Mengatur lebar gambar untuk layar kecil */
+  }
+
+  .wrap-2 img {
+    max-width: 40%; /* Mengatur lebar gambar untuk layar kecil */
+  }
+
+  .content {
+    font-size: 0.9em; /* Mengurangi ukuran font pada layar kecil */
+    padding: 1em; /* Mengurangi padding untuk layar kecil */
+  }
+}
+
+@media (max-width: 576px) {
+  .wrap img {
+    max-width: 50%; /* Mengatur lebar gambar lebih lanjut untuk layar sangat kecil */
+  }
+  .wrap-2 img {
+    max-width: 50%; /* Mengatur lebar gambar lebih lanjut untuk layar sangat kecil */
+  }
+
+  .content {
+    font-size: 0.8em; /* Mengurangi ukuran font lebih lanjut pada layar sangat kecil */
+    padding: 0.5em; /* Mengurangi padding lebih lanjut */
+  }
+}
+/*** About-program ***/
 
 /*** Products ***/
 .product {
@@ -331,7 +410,6 @@
   overflow-x: scroll;
   margin-bottom: 70px;
 }
-
 
 .category-title {
   font-size: 24px; /* Ukuran font */
@@ -460,7 +538,7 @@
   display: block;
   width: 100%;
   height: 100%; /* Menyesuaikan tinggi secara proporsional */
-  object-fit: cover;/* Memenuhi container dengan memotong bagian yang tidak diperlukan */
+  object-fit: cover; /* Memenuhi container dengan memotong bagian yang tidak diperlukan */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Efek zoom in */
   border-radius: 15px; /* Membuat efek rounded */
 }
