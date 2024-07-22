@@ -38,7 +38,7 @@ let figureproduct = `
                 <h4 id="nama" class="mb-3 custom-color">##nama##</h4>
               </div>
               <div class="store-overlay">
-                <a href="https://shopee.co.id/Jam-Tangan-cat.11042900" class="btn btn-primary rounded-pill py-2 px-4 m-2"
+                <a href="https://id.shp.ee/URU3RVR" class="btn btn-primary rounded-pill py-2 px-4 m-2"
                   >More Detail <i class="fa fa-arrow-right ms-2"></i
                 ></a>
               </div>

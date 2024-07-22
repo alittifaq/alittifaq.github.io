@@ -289,7 +289,10 @@
   position: relative;
   overflow: hidden; /* Pastikan tidak ada konten yang melampaui kontainer */
   width: 100%;
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center; /* Menempatkan konten di tengah secara horizontal */
+  align-items: center; /* Menempatkan konten di tengah secara vertikal */
 }
 
 .wrap img {
@@ -304,6 +307,23 @@
   height: auto;
   object-fit: cover; /* Memastikan gambar mengisi kontainer tanpa merusak rasio aspek */
   transition: transform 1s ease;
+}
+
+.instruction {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.instruction.show {
+  opacity: 1;
 }
 
 .content {

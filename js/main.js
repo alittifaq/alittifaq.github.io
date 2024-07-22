@@ -113,6 +113,17 @@
     });
   });
 
+  //show intruction
+  window.addEventListener('scroll', function() {
+    const instructions = document.querySelectorAll('.instruction');
+    instructions.forEach(instruction => {
+      instruction.classList.add('show');
+      setTimeout(() => {
+        instruction.classList.remove('show');
+      }, 3000); // Tampilkan selama 3 detik
+    });
+  });
+
   // Testimonial carousel
   $(".testimonial-carousel").owlCarousel({
     autoplay: true,
