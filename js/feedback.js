@@ -1,5 +1,5 @@
-import { postJSON } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.7/croot.js";
-import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.1.5/croot.js";
+import { postJSON } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/api.js";
+import { setInner } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.0/element.js";
 
 let feedbacks = [];
 
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let feedbackItem = `
         <div class="feedback-item">
           <div class="feedback-rating">${generateStars(feedback.rating)}</div>
-          <p class="feedback-content">${feedback.content}</p>
+          <p class="feedback-content">${feedback.feedback_content || feedback.content}</p>
         </div>
       `;
       htmlFeedbacks += feedbackItem;
@@ -37,11 +37,13 @@ document.addEventListener("DOMContentLoaded", function () {
   fetch(feedbackUrl)
     .then((response) => {
       if (!response.ok) {
+        console.error("Response error:", response.status, response.statusText);
         throw new Error(`HTTP error! Status: ${response.status}`);
       }
       return response.json();
     })
     .then((data) => {
+      console.log("Data dari server:", data); // Log data dari server
       feedbacks = data;
       renderFeedback();
     })
@@ -65,24 +67,19 @@ document.addEventListener("DOMContentLoaded", function () {
       };
 
       // Kirim data feedback ke backend
-      postJSON(feedbackUrl, "login", newFeedback)
-        .then((response) => {
-          if (response.success) {
-            alert("Feedback berhasil dikirim!");
-            // Tambahkan feedback baru ke daftar
-            feedbacks.push(newFeedback);
-            // Render ulang daftar feedback
-            renderFeedback();
-            // Reset form
-            feedbackForm.reset();
-          } else {
-            alert("Gagal mengirim feedback. Silakan coba lagi.");
-          }
-        })
-        .catch((error) => {
+      postJSON(feedbackUrl, "Authorization", "", newFeedback, (response) => {
+        if (response.status === 200) {
+          alert("Feedback berhasil dikirim!");
+          // Tambahkan feedback baru ke daftar
+          feedbacks.push(newFeedback);
+          // Render ulang daftar feedback
+          renderFeedback();
+          // Reset form
+          feedbackForm.reset();
+        } else {
           alert("Gagal mengirim feedback. Silakan coba lagi.");
-          console.error("Error posting feedback:", error);
-        });
+        }
+      });
     } else {
       alert("Mohon lengkapi rating dan saran Anda!");
     }
